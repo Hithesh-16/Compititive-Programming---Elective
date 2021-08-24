@@ -43,7 +43,7 @@ def alphaAsia():
             cities.extend([ j+' - '+i])
     return sorted(cities)
 
-# Note: Check for test cases to understand the output format.
+# Note: Check for test cases to understand the output format...
 locations = {'North America': {'USA': ['Mountain View']}}
 locations['Asia'] = {'India' : ['Bangalore']}
 locations['North America']['USA'].append('Atlanta')
