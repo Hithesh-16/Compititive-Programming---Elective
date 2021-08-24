@@ -7,6 +7,5 @@
 
 def handtodice(hand):
 	x=(hand//100,(hand//10)%10, hand%10)
-	
 	return x
-print(handtodice(123))
+# print(handtodice(123))
