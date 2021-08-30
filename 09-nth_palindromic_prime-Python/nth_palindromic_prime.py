@@ -7,25 +7,33 @@
 # so 313 is an palindrome Prime. fun_nth_palindrome_prime(0) 
 # returns 2
 
-def isPalindromicPrime(a):
-    if (isPalindrome(a) and isPrime(a)):
-        return True
-    else:
-        return False
- 
-def isPalindrome(n):
-    n=str(n)
-    return n[::-1]==n
- 
 def isPrime(n):
-    if n < 2:
-        return False
-    elif n == 2:
-        return True
-    elif n % 2 == 0:
-        return False
-    else:
-        for i in range(3, n):
-            if n % i == 0:
-                return False
-        return True
+	for i in range(2,int(n**0.5)+1):
+		if n%i==0:
+			return False
+	return True
+    
+def revNumber(num):
+	rn = 0
+	while(num!=0):
+		rm = num%10
+		rn = rn*10 + rm
+		num = num//10
+	return rn
+
+def isPalindrome(num):
+	rnum = revNumber(num)
+	return (num == rnum)
+
+def nthPalindromicPrime(x):
+	cou = -1
+	num=2
+	while(cou!=x):
+		if isPrime(num) and isPalindrome(num):
+			cou = cou+1
+		num = num+1
+	return num-1
+        
+	
+
+# print(nthPalindromicPrime(int(input())))
