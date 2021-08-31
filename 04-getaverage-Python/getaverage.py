@@ -9,6 +9,14 @@
 
 
 
-def fun_getaverage(s): 
-	return 0.0
+def fun_getaverage(s):
+	sum=0
+	base=0
+	for i in s.split(","):
+		if i.isnumeric():
+			sum+=float(i)
+			base+=1
+	if base==0:
+		return 0.0
+	return sum/base
 
